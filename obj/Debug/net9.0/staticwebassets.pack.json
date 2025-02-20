@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/olegvolostnyh/ValidationExample/wwwroot/index.html",
+      "PackagePath": "staticwebassets/index.html"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.ValidationExample.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.ValidationExample.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.build.ValidationExample.props",
+      "PackagePath": "build\\ValidationExample.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.buildMultiTargeting.ValidationExample.props",
+      "PackagePath": "buildMultiTargeting\\ValidationExample.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.buildTransitive.ValidationExample.props",
+      "PackagePath": "buildTransitive\\ValidationExample.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

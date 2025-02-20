@@ -1,0 +1,53 @@
+@{
+    ViewData["Title"] = "Валідація користувача";
+}
+
+<h2>Форма валідації</h2>
+
+<form id="validationForm">
+    <label for="phone">Телефон:</label>
+    <input type="text" id="phone" placeholder="+380971234567">
+
+    <label for="position">Посада:</label>
+    <input type="text" id="position" placeholder="Менеджер">
+
+    <label for="fileName">Файл:</label>
+    <input type="text" id="fileName" placeholder="photo.jpg">
+
+    <button type="submit">Перевірити</button>
+</form>
+
+<div id="result"></div>
+
+<script>
+        document.getElementById("validationForm").addEventListener("submit", async function(event) {
+        event.preventDefault();
+
+        const phone = document.getElementById("phone").value;
+        const position = document.getElementById("position").value;
+        const fileName = document.getElementById("fileName").value;
+        const resultDiv = document.getElementById("result");
+
+        const data = { Phone: phone, Position: position, FileName: fileName };
+
+        const response = await fetch("/Home/ValidateUser", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+        });
+
+        resultDiv.innerHTML = "";
+
+        if (response.ok) {
+            const successMessage = await response.text();
+            resultDiv.innerHTML = `<p style="color: green;">✅ ${successMessage}</p>`;
+        } else {
+            const errors = await response.json();
+            errors.forEach(error => {
+                resultDiv.innerHTML += `<p style="color: red;">❌ ${error}</p>`;
+            });
+        }
+    });
+
+</script>
+

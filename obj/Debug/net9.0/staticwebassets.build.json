@@ -1,0 +1,20 @@
+{
+  "Version": 1,
+  "Hash": "A7hhdi7Vd63KLt9SH2LR0/BBh8NSDHwkPMnZ3DMNNJw=",
+  "Source": "ValidationExample",
+  "BasePath": "_content/ValidationExample",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ValidationExample/wwwroot",
+      "Source": "ValidationExample",
+      "ContentRoot": "/Users/olegvolostnyh/ValidationExample/wwwroot/",
+      "BasePath": "_content/ValidationExample",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [],
+  "Endpoints": []
+}
